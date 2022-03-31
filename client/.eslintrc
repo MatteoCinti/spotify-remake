@@ -13,9 +13,19 @@
   "extends": ["airbnb-typescript", "plugin:prettier/recommended"],
 
   "rules": {
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "mjs": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
     "react/no-danger": "off", // it's self explainatory that no-danger should be used sparingly
     "react/react-in-jsx-scope": "off", // next.js does not require react in most components
-    "react/prop-types": "off", // as long as TS strict mode is off this is not required
     "react/require-default-props": "off",
     "no-console": "error", // no console statements allowed
     "prettier/prettier": "off" // don't show prettier errors as it will be fixed when saved anyway
@@ -23,6 +33,17 @@
   "settings": {
     "react": {
       "version": "detect"
+    },
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["@components", "./components/"],
+          ["@styles", "./styles/"],
+          ["@root", "./"],
+          ["@utils", "./utils"]
+        ],
+        "extensions": [".ts", ".js", ".tsx"]
+      }
     }
   },
   "env": {
