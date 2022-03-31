@@ -1,4 +1,15 @@
 {
+  "name": "spotify-remake",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:MatteoCinti/spotify-remake.git",
+  "author": "MatteoCinti <matteo.cinti@barnebys.com>",
+  "license": "MIT",
+  "scripts": {
+    "prepare": "husky install",
+    "style:all": "cd client && yarn style:all",
+    "style:lint": "cd client && yarn style:lint"
+  },
   "devDependencies": {
     "husky": "^7.0.4"
   }
