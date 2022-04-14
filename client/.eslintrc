@@ -10,12 +10,7 @@
     }
   },
 
-  "extends": [
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended",
-    "airbnb-typescript",
-    "plugin:prettier/recommended"
-  ],
+  "extends": ["airbnb-typescript", "plugin:prettier/recommended"],
 
   "rules": {
     "import/extensions": [
