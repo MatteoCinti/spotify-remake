@@ -10,25 +10,20 @@
     }
   },
 
-  "extends": ["airbnb-typescript", "plugin:prettier/recommended"],
+  "extends": [
+    "airbnb-typescript",
+    "plugin:prettier/recommended",
+    "plugin:jest/recommended"
+  ],
+
+  "plugins": ["testing-library"],
 
   "rules": {
-    "import/extensions": [
-      "error",
-      "ignorePackages",
-      {
-        "js": "never",
-        "mjs": "never",
-        "jsx": "never",
-        "ts": "never",
-        "tsx": "never"
-      }
-    ],
-    "react/no-danger": "off", // it's self explainatory that no-danger should be used sparingly
-    "react/react-in-jsx-scope": "off", // next.js does not require react in most components
+    "react/no-danger": "off",
+    "react/react-in-jsx-scope": "off",
     "react/require-default-props": "off",
-    "no-console": "error", // no console statements allowed
-    "prettier/prettier": "off" // don't show prettier errors as it will be fixed when saved anyway
+    "no-console": "warn",
+    "prettier/prettier": "off"
   },
   "settings": {
     "react": {
@@ -46,9 +41,20 @@
       }
     }
   },
+  "overrides": [
+    {
+      // 3) Now we enable eslint-plugin-testing-library rules or preset only for matching files!
+      "files": [
+        "**/__tests__/**/*.[jt]s?(x)",
+        "**/?(*.)+(spec|test).[jt]s?(x)"
+      ],
+      "extends": ["plugin:testing-library/react"]
+    }
+  ],
   "env": {
     "node": true,
     "browser": true,
-    "amd": true
+    "amd": true,
+    "jest": "true"
   }
 }

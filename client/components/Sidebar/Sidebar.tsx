@@ -1,13 +1,7 @@
-import React from 'react';
-import tw from 'twin.macro';
+import StyledSideBar from './styledComponents';
 
-const StyledSideBar = tw.aside`
-  bg-blue-500
-  text-black
-`;
-
-const Sidebar: React.FC = () => {
-  return <StyledSideBar>Sidebar</StyledSideBar>;
+const Sidebar = (): JSX.Element => {
+  return <StyledSideBar data-testid="sidebar">Sidebar</StyledSideBar>;
 };
 
 export default Sidebar;
