@@ -1,11 +1,12 @@
 import React from 'react';
 import { AppProps } from 'next/app';
+import { GlobalStyles } from '@styles';
 
-import '../styles/index.css';
-
-function MyApp({ Component, pageProps }: AppProps): JSX.Element {
-  /* eslint-disable-next-line react/jsx-props-no-spreading */
-  return <Component {...pageProps} />;
-}
-
+const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
+  <>
+    <GlobalStyles />
+    {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+    <Component {...pageProps} />
+  </>
+);
 export default MyApp;

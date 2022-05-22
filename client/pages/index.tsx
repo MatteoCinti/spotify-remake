@@ -1,11 +1,17 @@
-import Head from 'next/head';
-import styled from 'styled-components';
-// import Link from 'next/link';
-import { Sidebar } from '@components';
 import Package from '@root/package.json';
+import Head from 'next/head';
+import tw from 'twin.macro';
 
-const StyledHeader = styled.header`
-  background: red;
+import { Sidebar } from '@components';
+
+const StyledHeader = tw.header`
+  bg-blue-500
+  font-ultra
+  flex
+  flex-col
+  items-center
+  justify-center
+  py-2
 `;
 
 const IndexPage = (): JSX.Element => (
@@ -15,7 +21,7 @@ const IndexPage = (): JSX.Element => (
     </Head>
 
     <main>
-      <StyledHeader className="flex flex-col items-center justify-center py-2">
+      <StyledHeader>
         <p>This is a dope Spotify 2.0 Build</p>
       </StyledHeader>
       <Sidebar />

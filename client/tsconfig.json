@@ -3,7 +3,7 @@
     "baseUrl": ".",
     "paths": {
       "@components": ["components/index.ts"],
-      "@styles": ["styles/index.css"],
+      "@styles": ["styles/index.ts"],
       "@root/*": ["*"],
       "@utils/*": ["utils/*"]
     },
