@@ -5,7 +5,7 @@
       "@components": ["components/index.ts"],
       "@styles": ["styles/index.ts"],
       "@utils/*": ["utils/*"],
-      "@containers/*": ["containers/*"],
+      "@containers": ["containers/index.ts"],
       "@root/*": ["*"]
     },
     "target": "esnext",

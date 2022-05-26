@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import tw from 'twin.macro';
 
 import { Sidebar } from '@components';
@@ -13,7 +12,7 @@ const StyledHeader = tw.header`
   py-2
 `;
 
-const IndexPage = (): JSX.Element => (
+const LandingPage = (): JSX.Element => (
   <>
     <main>
       <StyledHeader>
@@ -27,4 +26,4 @@ const IndexPage = (): JSX.Element => (
   </>
 );
 
-export default IndexPage;
+export default LandingPage;

@@ -1,1 +1,3 @@
-export default './Document';
+import Document from './Document';
+
+export default Document;

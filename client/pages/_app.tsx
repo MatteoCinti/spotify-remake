@@ -1,1 +1,1 @@
-export default '@containers/app';
+export { _app as default } from '@containers';

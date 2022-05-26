@@ -1,7 +1,9 @@
-import StyledSideBar from './styledComponents';
+import { Aside, Navigation } from './wrappers';
 
-const Sidebar = (): JSX.Element => {
-  return <StyledSideBar data-testid="sidebar">Sidebar</StyledSideBar>;
-};
+const Sidebar = (): JSX.Element => (
+  <Aside data-testid="sidebar">
+    <Navigation />
+  </Aside>
+);
 
 export default Sidebar;
