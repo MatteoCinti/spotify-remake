@@ -5,9 +5,9 @@ const moduleNameMapper = require('tsconfig-paths-jest')(tsconfig);
 
 /**
  * check in case of bugs running tests with next
- *
+ * eslint-disable-next-line
  */
-// eslint-disable-next-line
+/* eslint-disable-next-line */
 const createJestConfig = nextJest({
   dir: './',
 });
@@ -19,13 +19,12 @@ const customJestConfig = {
    * setup in ts.
    */
   moduleNameMapper,
-
   testEnvironment: 'jest-environment-jsdom',
   testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/.next/'],
   transform: {
     // Use babel-jest to transpile tests with the next/babel preset
     // https://jestjs.io/docs/configuration#transform-objectstring-pathtotransformer--pathtotransformer-object
-    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
+    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest'],
   },
   setupFilesAfterEnv: ['<rootDir>/__test__/config/importJestDOM.ts'],
 };

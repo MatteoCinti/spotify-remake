@@ -1,4 +1,3 @@
-import Package from '@root/package.json';
 import Head from 'next/head';
 import tw from 'twin.macro';
 
@@ -16,10 +15,6 @@ const StyledHeader = tw.header`
 
 const IndexPage = (): JSX.Element => (
   <>
-    <Head>
-      <title>{Package.description}</title>
-    </Head>
-
     <main>
       <StyledHeader>
         <p>This is a dope Spotify 2.0 Build</p>

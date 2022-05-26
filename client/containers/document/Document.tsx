@@ -1,11 +1,8 @@
-import Document, {
-  DocumentContext,
-  Html,
-  Head,
-  Main,
-  NextScript,
-} from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
+import Document, { DocumentContext, Html } from 'next/document';
+
+import DocumentHead from './DocumentHead';
+import DocumentBody from './DocumentBody';
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -37,22 +34,8 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head>
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link
-            rel="preconnect"
-            href="https://fonts.gstatic.com"
-            crossOrigin="true"
-          />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Ultra&display=swap"
-            rel="stylesheet"
-          />
-        </Head>
-        <body>
-          <Main />
-          <NextScript />
-        </body>
+        <DocumentHead />
+        <DocumentBody />
       </Html>
     );
   }

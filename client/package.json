@@ -4,14 +4,14 @@
   "version": "1.0.0",
   "license": "MIT",
   "engines": {
-    "node": "16"
+    "node": "18"
   },
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start",
     "test": "jest",
-    "test:watch": "jest --watch",
+    "test:watch": "jest --watchAll",
     "style:all": "tsc && npm run style:lint && npm run style:prettier",
     "style:lint": "eslint '**/*.{js,jsx,ts,tsx}'",
     "style:prettier": "prettier --check '**/*.{js,jsx,ts,tsx}'",

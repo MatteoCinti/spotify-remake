@@ -1,7 +1,6 @@
 {
   "root": true,
   "parser": "@typescript-eslint/parser",
-
   "parserOptions": {
     "project": "./tsconfig.json",
     "ecmaVersion": 2020, // Allows for the parsing of modern JS
@@ -9,15 +8,12 @@
       "jsx": true // Allows for the parsing of JSX
     }
   },
-
   "extends": [
     "airbnb-typescript",
     "plugin:prettier/recommended",
     "plugin:jest/recommended"
   ],
-
   "plugins": ["testing-library"],
-
   "rules": {
     "react/no-danger": "off",
     "react/react-in-jsx-scope": "off",
@@ -33,9 +29,10 @@
       "alias": {
         "map": [
           ["@components", "./components/"],
+          ["@containers", "containers"],
           ["@styles", "./styles/"],
-          ["@root", "./"],
-          ["@utils", "./utils"]
+          ["@utils", "./utils"],
+          ["@root", "./"]
         ],
         "extensions": [".ts", ".js", ".tsx"]
       }
