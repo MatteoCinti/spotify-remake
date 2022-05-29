@@ -8,11 +8,13 @@ const StyledNavigation = tw.nav`
   space-y-4
 `;
 
-const Navigation = () => (
-  <StyledNavigation>
-    <UserNavigation />
-    <PlaylistsNavigation />
-  </StyledNavigation>
-);
+function Navigation(): JSX.Element {
+  return (
+    <StyledNavigation>
+      <UserNavigation />
+      <PlaylistsNavigation />
+    </StyledNavigation>
+  );
+}
 
 export default Navigation;

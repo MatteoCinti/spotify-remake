@@ -1,29 +1,17 @@
+import { Sidebar } from '@containers';
 import tw from 'twin.macro';
 
-import { Sidebar } from '@components';
+function LandingPage(): JSX.Element {
+  return (
+    <div css={tw`bg-black h-screen overflow-hidden`}>
+      <main>
+        <Sidebar />
+        {/* Center */}
+      </main>
 
-const StyledHeader = tw.header`
-  bg-blue-500
-  font-ultra
-  flex
-  flex-col
-  items-center
-  justify-center
-  py-2
-`;
-
-const LandingPage = (): JSX.Element => (
-  <>
-    <main>
-      <StyledHeader>
-        <p>This is a dope Spotify 2.0 Build</p>
-      </StyledHeader>
-      <Sidebar />
-      {/* Center */}
-    </main>
-
-    <section>{/* Player */}</section>
-  </>
-);
+      <section>{/* Player */}</section>
+    </div>
+  );
+}
 
 export default LandingPage;

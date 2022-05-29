@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FontImport = () => {
+function FontImport(): JSX.Element {
   return (
     <>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,6 +15,6 @@ const FontImport = () => {
       />
     </>
   );
-};
+}
 
 export default FontImport;
