@@ -28,10 +28,12 @@
     "import/resolver": {
       "alias": {
         "map": [
-          ["@components", "./components/"],
-          ["@containers", "containers"],
-          ["@styles", "./styles/"],
+          ["@components", "./components"],
+          ["@containers", "./containers"],
+          ["@providers", "./providers"],
+          ["@styles", "./styles"],
           ["@utils", "./utils"],
+          ["@lib", "./lib"],
           ["@root", "./"]
         ],
         "extensions": [".ts", ".js", ".tsx"]

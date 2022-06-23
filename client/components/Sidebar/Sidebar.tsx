@@ -1,4 +1,4 @@
-import { Aside } from '@components';
+import { Aside } from '@components/Elements';
 import tw from 'twin.macro';
 import { Navigation } from './wrappers';
 

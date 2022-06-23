@@ -1,5 +1,5 @@
 import React from 'react';
-import { horizontalRuleStyles as hrStyles } from '../containers/Sidebar/styles';
+import { horizontalRuleStyles as hrStyles } from './styles';
 
 function HorizontalRule() {
   return <hr css={hrStyles} />;

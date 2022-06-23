@@ -2,10 +2,13 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
+      "@containers": ["containers/index.ts"],
+      "@components/*": ["components/*"],
       "@components": ["components/index.ts"],
+      "@providers": ["providers/index.ts"],
       "@styles": ["styles/index.ts"],
       "@utils/*": ["utils/*"],
-      "@containers": ["containers/index.ts"],
+      "@lib/*": ["lib/*"],
       "@root/*": ["*"]
     },
     "target": "esnext",

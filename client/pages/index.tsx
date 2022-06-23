@@ -1,5 +1,5 @@
-import { Sidebar } from '@containers';
 import tw from 'twin.macro';
+import { Sidebar } from '@components';
 
 function LandingPage(): JSX.Element {
   return (
